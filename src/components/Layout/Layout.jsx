@@ -8,7 +8,7 @@ import Loader from "../Loader/Loader";
 
 const Layout = () => {
   return (
-    <>
+    <div className="mainContainer">
       <div className="permanent">
         <header>
           <Link className="logoContainer" to="/">
@@ -28,7 +28,7 @@ const Layout = () => {
           <Outlet />
         </Suspense>
       </main>
-    </>
+    </div>
   );
 };
 

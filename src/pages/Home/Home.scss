@@ -1,0 +1,16 @@
+@use "../../styles/vars";
+
+.container {
+  background-color: vars.$light;
+  height: 840px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  // position: relative;
+  
+}
+.girlImg{
+  position: absolute;
+  right: 5px;
+}

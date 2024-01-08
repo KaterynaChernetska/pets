@@ -1,29 +1,34 @@
 @use "../../styles/vars" as vars;
-
+.mainContainer {
+  padding: 30px;
+  display: flex;
+}
 .main {
   width: 50%;
-  float: right;
 }
 
 .permanent {
-  padding: 30px 147px 0px 147px;
   width: 50%;
-  float: left;
+  padding-left: 100px;
 }
+
 .logoContainer {
   display: flex;
   align-items: center;
   gap: 10px;
   margin-bottom: 80px;
 }
+
 .greetings {
   margin-bottom: 10px;
 }
+
 .welcomeText {
   color: vars.$grey;
   margin-bottom: 60px;
 }
-.startUsingApp{
-    font-size: 20px;
-    margin-bottom: 20px;
+
+.startUsingApp {
+  font-size: 20px;
+  margin-bottom: 20px;
 }
