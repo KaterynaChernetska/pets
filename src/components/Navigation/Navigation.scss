@@ -1,0 +1,54 @@
+@use "../../styles/vars";
+
+.mainNavigation {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  & .img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    width: 138px;
+    height: 198px;
+    margin-bottom: 10px;
+    &:hover {
+      border: 2px solid vars.$white;
+    }
+    &:active {
+      border: 2px solid vars.$light;
+    }
+  }
+  & .firstContainer {
+    background-color: vars.$purple;
+    border: 2px solid #e1e2ff;
+  }
+
+  & .secondContainer {
+    background-color: vars.$green;
+    border: 2px solid #d5f7e3;
+  }
+
+  & .thirdContainer {
+    background-color: vars.$yellow;
+    border: 2px solid #ffedcc;
+    align-items: flex-end;
+  }
+}
+
+.linkContainer {
+  text-align: center;
+}
+.linkBtn {
+  background-color: vars.$white;
+  border-radius: 10px;
+  padding: 10px 0;
+  color: vars.$accent;
+  &:hover {
+    background-color: vars.$light;
+  }
+  &:active {
+    background-color: vars.$accent;
+    color: vars.$white;
+  }
+}

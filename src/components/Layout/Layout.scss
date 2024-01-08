@@ -1,0 +1,29 @@
+@use "../../styles/vars" as vars;
+
+.main {
+  width: 50%;
+  float: right;
+}
+
+.permanent {
+  padding: 30px 147px 0px 147px;
+  width: 50%;
+  float: left;
+}
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 80px;
+}
+.greetings {
+  margin-bottom: 10px;
+}
+.welcomeText {
+  color: vars.$grey;
+  margin-bottom: 60px;
+}
+.startUsingApp{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
