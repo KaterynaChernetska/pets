@@ -1,10 +1,15 @@
-import SearchPanel from "../../components/SearchPanel/SearchPanel";
+
+import GoBackBtn from "../../components/GoBackBtn/GoBackBtn";
 
 const Voting = () => {
   return (
-    <>
-      {/* <SearchPanel /> */}
-    </>
+    
+      <section >
+        <div>
+        <GoBackBtn />
+        </div>
+      </section>
+    
   );
 };
 

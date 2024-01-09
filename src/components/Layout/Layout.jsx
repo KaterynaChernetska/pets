@@ -1,13 +1,16 @@
 import { Suspense } from "react";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useLocation } from "react-router-dom";
 import "./Layout.scss";
 import Paw from "../../assets/icons/paw.svg";
 import Logo from "../../assets/icons/PetsPaw.svg";
 import Navigation from "../Navigation/Navigation";
 import Loader from "../Loader/Loader";
 import SearchPanel from "../SearchPanel/SearchPanel";
+import GoBackBtn from "../GoBackBtn/GoBackBtn";
 
 const Layout = () => {
+  const { pathname } = useLocation();
+  // console.log(location);
   return (
     <div className="mainContainer">
       <div className="permanent">
@@ -25,10 +28,12 @@ const Layout = () => {
         <Navigation />
       </div>
       <main className="main">
-        <SearchPanel />
-        <Suspense fallback={<Loader />}>
-          <Outlet />
-        </Suspense>
+        {pathname === "/" ? "" : <SearchPanel />}
+        <div className="panel">
+          <Suspense fallback={<Loader />}>
+            <Outlet />
+          </Suspense>
+        </div>
       </main>
     </div>
   );
