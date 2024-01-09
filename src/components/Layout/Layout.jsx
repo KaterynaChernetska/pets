@@ -5,6 +5,7 @@ import Paw from "../../assets/icons/paw.svg";
 import Logo from "../../assets/icons/PetsPaw.svg";
 import Navigation from "../Navigation/Navigation";
 import Loader from "../Loader/Loader";
+import SearchPanel from "../SearchPanel/SearchPanel";
 
 const Layout = () => {
   return (
@@ -24,6 +25,7 @@ const Layout = () => {
         <Navigation />
       </div>
       <main className="main">
+        <SearchPanel />
         <Suspense fallback={<Loader />}>
           <Outlet />
         </Suspense>

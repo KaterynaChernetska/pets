@@ -1,9 +1,11 @@
-
+import SearchPanel from "../../components/SearchPanel/SearchPanel";
 
 const Voting = () => {
-    return (
-        <div>Voting</div>
-    )
-}
+  return (
+    <>
+      {/* <SearchPanel /> */}
+    </>
+  );
+};
 
 export default Voting;

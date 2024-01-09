@@ -1,0 +1,71 @@
+@use "../../styles/vars";
+
+.searchContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.searchForm {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  background-color: vars.$white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0px 2px 2px vars.$grey;
+  &:hover,
+  &:focus {
+    color: vars.$white;
+  }
+}
+
+.searchInput {
+  border: none;
+  font-size: 20px;
+  outline: none;
+  &:active,
+  &:focus {
+    border: none;
+    outline: none;
+  }
+}
+
+.searchBtn {
+  border: none;
+  border-radius: 5px;
+  background-color: vars.$light;
+  padding: 10px;
+  &:hover,
+  &:focus {
+    background-color: vars.$accent;
+
+    .searchImg {
+      filter: brightness(0) invert(1);
+    }
+  }
+}
+
+.iconsList {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.iconListItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: vars.$white;
+  border-radius: 10px;
+  height: 60px;
+  width: 60px;
+  &:hover {
+    background-color: vars.$light;
+  }
+}
+
+.iconListImg {
+  width: 30px;
+  height: 30px;
+}
