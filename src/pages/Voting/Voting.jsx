@@ -1,15 +1,12 @@
-
 import GoBackBtn from "../../components/GoBackBtn/GoBackBtn";
 
 const Voting = () => {
   return (
-    
-      <section >
-        <div>
+    <section>
+      <div>
         <GoBackBtn />
-        </div>
-      </section>
-    
+      </div>
+    </section>
   );
 };
 

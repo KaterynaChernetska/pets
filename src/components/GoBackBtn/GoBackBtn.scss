@@ -1,21 +1,20 @@
-@use '../../styles/vars';
+@use "../../styles/vars";
 
-.goBackBtn{
-    border: none;
-    border-radius: 10px;
-    background-color: vars.$light;
-    cursor: pointer;
-    &:hover {
-        background-color: vars.$accent;
-        .goBackArrow{
-            filter: brightness(0) invert(1);
-        }
+.goBackBtn {
+  border: none;
+  border-radius: 10px;
+  background-color: vars.$light;
+  cursor: pointer;
+  &:hover {
+    background-color: vars.$accent;
+    .goBackArrow {
+      filter: brightness(0) invert(1);
     }
-    
+  }
 }
 
-.goBackArrow{
-    padding: 10px;
-    width: 20px;
-    height: 20px;
+.goBackArrow {
+  padding: 10px;
+  width: 20px;
+  height: 20px;
 }

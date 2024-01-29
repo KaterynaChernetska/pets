@@ -6,6 +6,7 @@ import Dislike from "../../assets/icons/dislike.svg";
 import Fav from "../../assets/icons/favorite.svg";
 
 const SearchPanel = () => {
+ 
   return (
     <div className="searchContainer">
       <form className="searchForm">

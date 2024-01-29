@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Navigation.scss";
 import Table from "../../assets/icons/vote-table.svg";
 import Breeds from "../../assets/icons/pet-breeds.svg";
@@ -7,24 +7,24 @@ import Search from "../../assets/icons/images-search.svg";
 const Navigation = () => {
   return (
     <nav className="mainNavigation">
-      <NavLink className="linkContainer" to="/voting">
+      <Link className="linkContainer" to="/voting">
         <div className="img firstContainer">
           <img src={Table} alt="Tablet" />
         </div>
-        <div className="linkBtn"> VOTING</div>
-      </NavLink>
-      <NavLink className="linkContainer" to="/breads">
+        <button  className="linkBtn"> VOTING</button>
+      </Link>
+      <Link className="linkContainer" to="/breeds">
         <div className="img secondContainer">
           <img src={Breeds} alt="Cat" />
         </div>
-        <div className="linkBtn">BREEDS</div>
-      </NavLink>
-      <NavLink className="linkContainer" to="/gallery">
+        <button className="linkBtn">BREEDS</button>
+      </Link>
+      <Link className="linkContainer" to="/gallery">
         <div className="img thirdContainer">
           <img src={Search} alt="Phone" />
         </div>
-        <div className="linkBtn">GALLERY</div>
-      </NavLink>
+        <button className="linkBtn">GALLERY</button>
+      </Link>
     </nav>
   );
 };

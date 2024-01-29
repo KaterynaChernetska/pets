@@ -6,11 +6,9 @@ import Logo from "../../assets/icons/PetsPaw.svg";
 import Navigation from "../Navigation/Navigation";
 import Loader from "../Loader/Loader";
 import SearchPanel from "../SearchPanel/SearchPanel";
-import GoBackBtn from "../GoBackBtn/GoBackBtn";
 
 const Layout = () => {
   const { pathname } = useLocation();
-  // console.log(location);
   return (
     <div className="mainContainer">
       <div className="permanent">

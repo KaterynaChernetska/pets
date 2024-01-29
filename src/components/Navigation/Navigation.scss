@@ -42,6 +42,9 @@
 .linkBtn {
   background-color: vars.$white;
   border-radius: 10px;
+  border: none;
+  width: 138px;
+  height: 36px;
   padding: 10px 0;
   color: vars.$accent;
   &:hover {
