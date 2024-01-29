@@ -1,13 +1,13 @@
 import BreedListItem from "../BreedListItem/BreedListItem";
 
 const BreedsList = ({ listOfBreeds }) => {
-  console.log("listOfBreeds", listOfBreeds);
+  // console.log("listOfBreeds", listOfBreeds);
 
   return (
     <>
       <ul>
         {listOfBreeds.map((item) => (
-          <BreedListItem key={item.breeds[0].id} item={item} />
+          <BreedListItem key={item?.id} item={item} />
         ))}
       </ul>
     </>

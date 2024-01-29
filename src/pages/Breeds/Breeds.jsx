@@ -1,9 +1,9 @@
-import { useParams } from "react-router-dom";
 import GoBackBtn from "../../components/GoBackBtn/GoBackBtn";
 import "./Breeds.scss";
 import { useEffect, useState } from "react";
-import { getBreeds, getBreedsImages, getCatsImagesByBreed } from "../../services/breeds";
+import { getBreedsImages } from "../../services/breeds";
 import BreedsList from "../../components/BreedsList/BreedsList";
+import PageInfo from "../../components/PageInfo/PageInfo";
 
 const Breeds = () => {
   // const params = useParams();
@@ -22,25 +22,27 @@ const Breeds = () => {
   //   getAllBreeds();
   // }, []);
 
-    useEffect(() => {
-      const getAllBreeds = async () => {
-        try {
-          const data = await getBreedsImages();
-          console.log('data',  data)
-          setListOfBreeds(data);
+  useEffect(() => {
+    const getAllBreeds = async () => {
+      try {
+        const data = await getBreedsImages();
 
-        } catch (error) {
-          console.log(error);
-        }
-      };
+        setListOfBreeds(data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
 
-      getAllBreeds();
-    }, []);
+    getAllBreeds();
+  }, []);
 
   return (
     <>
       <section>
-        <GoBackBtn />
+        <div className="panelContainer">
+          <GoBackBtn />
+          <PageInfo color={"active"}>BREEDS</PageInfo>
+        </div>
         <BreedsList listOfBreeds={listOfBreeds} />
       </section>
     </>

@@ -1,17 +1,21 @@
-@use "../../styles/vars";
+@import "../../styles/vars";
 
 .mainContainer {
   padding: 30px;
   display: flex;
+  height: 100vh;
 }
+
 .main {
   width: 50%;
-  
 }
 
 .permanent {
   width: 50%;
   padding-left: 100px;
+  position: sticky;
+  top: 0;
+  height: 100%; 
 }
 
 .logoContainer {
@@ -26,7 +30,7 @@
 }
 
 .welcomeText {
-  color: vars.$grey;
+  color: $grey; // Using the imported variable
   margin-bottom: 60px;
 }
 
@@ -35,8 +39,8 @@
   margin-bottom: 20px;
 }
 
-.panel{
-background-color: vars.$white;
-border-radius: 10px;
-padding: 10px;
+.panel {
+  background-color: $white; // Using the imported variable
+  border-radius: 10px;
+  padding: 10px;
 }

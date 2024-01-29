@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getBreedsImages } from "../../../services/breeds";
+import GoBackBtn from "../../../components/GoBackBtn/GoBackBtn";
+import PageInfo from "../../../components/PageInfo/PageInfo";
+import "../Breeds.scss";
 
 const BreedDetails = () => {
   const { breedId } = useParams();
@@ -22,7 +25,12 @@ const BreedDetails = () => {
 
   return (
     <>
-      <p>{breedId}</p>
+      <div className="panelContainer">
+        <GoBackBtn />
+        <PageInfo color="disable">BREEDS</PageInfo>
+        <PageInfo color="active">{breedId}</PageInfo>
+      </div>
+
       {breedInfo.length > 0 &&
         breedInfo.map((item) => (
           <img key={item.id} src={item.url} alt={item.breeds[0].name} />
@@ -31,7 +39,7 @@ const BreedDetails = () => {
         <div>
           <h2>{breedInfo[0].breeds[0].name}</h2>
           <div>
-            <h3>Temperamnet</h3>
+            <h3>Temperament</h3>
             <p> {breedInfo[0].breeds[0].temperament}</p>
             <p>Origin: {breedInfo[0].breeds[0].origin}</p>
             <p>weight: {breedInfo[0].breeds[0].weight.metric} kg</p>
