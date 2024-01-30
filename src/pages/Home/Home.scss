@@ -1,16 +1,12 @@
 @use "../../styles/vars";
 
-.container {
+
+
+.containerImg {
   background-color: vars.$light;
   height: 840px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-}
-
-.containerImg {
-  position: relative;
-}
-.girlImg {
 }
