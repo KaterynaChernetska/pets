@@ -7,19 +7,19 @@ import Search from "../../assets/icons/images-search.svg";
 const Navigation = () => {
   return (
     <nav className="mainNavigation">
-      <Link className="linkContainer" to="/voting">
+      <Link className="firstlinkContainer" to="/voting">
         <div className="img firstContainer">
           <img src={Table} alt="Tablet" />
         </div>
         <button  className="linkBtn"> VOTING</button>
       </Link>
-      <Link className="linkContainer" to="/breeds">
+      <Link className="secondlinkContainer" to="/breeds">
         <div className="img secondContainer">
           <img src={Breeds} alt="Cat" />
         </div>
         <button className="linkBtn">BREEDS</button>
       </Link>
-      <Link className="linkContainer" to="/gallery">
+      <Link className="thirdlinkContainer" to="/gallery">
         <div className="img thirdContainer">
           <img src={Search} alt="Phone" />
         </div>

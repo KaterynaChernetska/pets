@@ -12,12 +12,6 @@
     width: 138px;
     height: 198px;
     margin-bottom: 10px;
-    &:hover {
-      border: 2px solid vars.$white;
-    }
-    &:active {
-      border: 2px solid vars.$light;
-    }
   }
   & .firstContainer {
     background-color: vars.$purple;
@@ -47,11 +41,36 @@
   height: 36px;
   padding: 10px 0;
   color: vars.$accent;
-  &:hover {
-    background-color: vars.$light;
-  }
+  cursor: pointer;
   &:active {
     background-color: vars.$accent;
     color: vars.$white;
+  }
+}
+.firstlinkContainer:hover,
+.firstlinkContainer:active {
+  .linkBtn {
+    background-color: vars.$light;
+  }
+  .img {
+    border: 2px solid vars.$white;
+  }
+}
+.secondlinkContainer:hover,
+.secondlinkContainer:active {
+  .linkBtn {
+    background-color: vars.$light;
+  }
+  .img {
+    border: 2px solid vars.$white;
+  }
+}
+.thirdlinkContainer:hover,
+.thirdlinkContainer:active {
+  .linkBtn {
+    background-color: vars.$light;
+  }
+  .img {
+    border: 2px solid vars.$white;
   }
 }
