@@ -1,7 +1,7 @@
 import "./PageInfo.scss";
 
 const PageInfo = (props) => {
-    console.log(props)
+    // console.log(props)
     return (
         <div className={`container ${props.color}`}>{props.children}</div>
     )

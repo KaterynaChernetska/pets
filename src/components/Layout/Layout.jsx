@@ -20,7 +20,7 @@ const Layout = () => {
         </header>
 
         <h1 className="greetings">HI! 👋</h1>
-        <p className="welcomeText">Welcome to MacPaw Bootcamp 2023</p>
+        {/* <p className="welcomeText">Welcome to MacPaw Bootcamp 2023</p> */}
         <h2 className="startUsingApp">Let's start using The Cat API</h2>
 
         <Navigation />

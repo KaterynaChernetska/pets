@@ -14,7 +14,7 @@ const BreedDetails = () => {
     const getBreedInfo = async () => {
       try {
         const data = await getBreedsImages(breedId);
-
+        console.log("sssssss", data);
         setBreedsInfo(data);
       } catch (error) {
         console.log(error);
@@ -34,16 +34,43 @@ const BreedDetails = () => {
 
       <PictureSlider breedInfo={breedInfo} />
 
-      <div>
+      <div className="breedInfo">
         {breedInfo.length > 0 && (
           <div>
-            <h2>{breedInfo[0].breeds[0].name}</h2>
-            <div>
-              <h3>Temperament</h3>
-              <p> {breedInfo[0].breeds[0].temperament}</p>
-              <p>Origin: {breedInfo[0].breeds[0].origin}</p>
-              <p>weight: {breedInfo[0].breeds[0].weight.metric} kg</p>
-              <p>life span: {breedInfo[0].breeds[0].life_span} years</p>
+            <h2 className="breedName">{breedInfo[0].breeds[0].name}</h2>
+            <h3 className="breedDescription">
+              {breedInfo[0].breeds[0].description}
+            </h3>
+            <div className="breedFlexContainer">
+              <div>
+                <h3>
+                  Temperament:{" "}
+                  <p className="breedTemperament">
+                    {breedInfo[0].breeds[0].temperament}
+                  </p>
+                </h3>
+              </div>
+              <div>
+                <h3>
+                  Origin:{" "}
+                  <span className="breedDescription">
+                    {breedInfo[0].breeds[0].origin}
+                  </span>
+                </h3>
+                <h3>
+                  Weight:
+                  <span className="breedDescription">
+                    {" "}
+                    {breedInfo[0].breeds[0].weight.metric} kg
+                  </span>
+                </h3>
+                <h3>
+                  Life span:{" "}
+                  <span className="breedDescription">
+                    {breedInfo[0].breeds[0].life_span} years
+                  </span>
+                </h3>
+              </div>
             </div>
           </div>
         )}

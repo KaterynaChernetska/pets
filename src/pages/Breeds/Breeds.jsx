@@ -9,12 +9,12 @@ const Breeds = () => {
   // const params = useParams();
   // console.log(params)
   const [listOfBreeds, setListOfBreeds] = useState([]);
-  const [ breedsOptions, setBreedsOptions] = useState([])
+  const [breedsOptions, setBreedsOptions] = useState([]);
   useEffect(() => {
     const getBreedsOptions = async () => {
       try {
         const data = await getBreeds();
-        console.log(data)
+        console.log("data", data);
         setBreedsOptions(data);
       } catch (error) {
         console.log(error);
@@ -28,7 +28,7 @@ const Breeds = () => {
     const getAllBreeds = async () => {
       try {
         const data = await getBreedsImages();
-
+        console.log("listOfBreeds", data);
         setListOfBreeds(data);
       } catch (error) {
         console.log(error);
@@ -45,9 +45,7 @@ const Breeds = () => {
           <GoBackBtn />
           <PageInfo color={"active"}>BREEDS</PageInfo>
           <div>
-            <select>
-           
-            </select>
+            <select></select>
           </div>
         </div>
         <BreedsList listOfBreeds={listOfBreeds} />
